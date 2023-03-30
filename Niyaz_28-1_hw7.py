@@ -135,3 +135,4 @@ if connection is not None:
 
 
     create_products(connection)
+ g
