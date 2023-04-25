@@ -16,12 +16,12 @@ import logging
 
 @dp.message_handler(commands=["start"])
 async def start_command(message: types.Message):
-    await message.answer(f"Добро пожаловать {message.from_user.username}")
+     await message.answer(f"Добро пожаловать {message.from_user.username}")
 
 
 @dp.message_handler(commands=["mem"])
 async def mem(message: types.Message):
-    photos = (
+    photos =  (
         'media/mem1.jpg',
         'media/mem2.jpg',
         'media/mem3.jpg',
@@ -72,7 +72,8 @@ async def quiz2(call: types.callback_query):
         "2020"]
     await bot.send_poll(
         chat_id=call.from_user.id,
-        question=question,
+        question=ques
+    tion,
         options=answers,
         is_anonymous=False,
         type='quiz',
